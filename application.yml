@@ -1,5 +1,6 @@
 ribbon:
   IsSecure: false
+
 pivotal:
   quotesService:
     name: quotes-service
@@ -7,6 +8,7 @@ pivotal:
     name: accounts-service
   portfolioService:
     name: portfolio-service
+
 logging:
   pattern:
     console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([trace=%X{X-Trace-Id:-},span=%X{X-Span-Id:-}]){yellow} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%replace(%xException){'\n','\u2028'}%nopex%n"
@@ -20,3 +22,44 @@ logging:
            web: DEBUG
            cloud: DEBUG
            boot: DEBUG
+
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]:localhost}
+    nonSecurePort: ${server.port}
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+management:
+  health:
+    db.enabled: true
+    rabbit.enabled: false
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: *
+
+spring:
+  sleuth:
+    sampler:
+      probability: 0.1
+
+---
+spring:
+  profiles: cloud
+  cloud:
+    services:
+      registrationMethod: route
+      
+eureka:
+  instance:
+     nonSecurePort: 80
+
+server:
+  port: 80       
+                  
