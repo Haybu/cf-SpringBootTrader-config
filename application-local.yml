@@ -7,10 +7,34 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
+
 management:
   health:
-    rabbit:
-      enabled: false
+    db.enabled: true
+    rabbit.enabled: false
+  security:
+    enabled: false
+  endpoints:
+    enabled-by-default: true
+    web.enabled: true
+    web.base-path: /admin
+  endpoint:
+    env.enabled: true
+    auditevents.enabled: true
+    beans.enabled: true
+    conditions.enabled: true
+    configprops.enabled: true
+    health.enabled: true
+    heapdump.enabled: true
+    info.enabled: true
+    logfile.enabled: true
+    mappings.enabled: true
+    loggers.enabled: true
+    metrics.enabled: true
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: true
+
 logging:
   level:
      io:
