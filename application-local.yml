@@ -20,4 +20,10 @@ logging:
      org:
         springframework:
            web: INFO
-           cloud: WARN
+           cloud: INFO
+           boot: INFO
+
+spring:
+  sleuth:
+    sampler:
+      probability: 0.1
