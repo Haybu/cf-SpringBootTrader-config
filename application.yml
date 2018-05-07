@@ -35,10 +35,8 @@ eureka:
 
 management:
   health:
-    db.enabled: true
+    db.enabled: false
     rabbit.enabled: false
-  security:
-    enabled: false
   endpoints:
     web:
       exposure:
