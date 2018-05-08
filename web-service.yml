@@ -46,5 +46,3 @@ security:
           user-info-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/userinfo
           jwk-set-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/keys
 
-server:
-  port: 8686
