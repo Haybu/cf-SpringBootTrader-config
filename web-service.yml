@@ -13,7 +13,7 @@ spring:
     encoding: UTF-8
     prefix: classpath:/templates/
     suffix: .html
-    mode: LEGACYHTML5
+    mode: HTML5
      
 eureka:
   client:
