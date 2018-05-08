@@ -21,7 +21,6 @@ logging:
         springframework:
            web: DEBUG
            cloud: DEBUG
-           boot: DEBUG
 
 eureka:
   instance:
