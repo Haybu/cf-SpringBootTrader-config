@@ -4,6 +4,17 @@ server:
 spring:
   application:
      name: web-service
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    servlet: 
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
      
 eureka:
   client:
