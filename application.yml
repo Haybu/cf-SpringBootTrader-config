@@ -55,8 +55,8 @@ spring:
       
 eureka:
   instance:
-     nonSecurePort: 80
+     nonSecurePort: ${PORT:80}
 
 server:
-  port: 80       
+  port: ${PORT:80}       
                   
