@@ -46,6 +46,13 @@ spring:
     sampler:
       probability: 0.1
 
+ zuul:
+  ignoredServices: '*'
+  routes:
+    quotes-service: /quotes-service/**
+    accounts-service: /accounts-service/***
+    portfolio-service: /portfolio-service/***
+
 ---
 spring:
   profiles: cloud
