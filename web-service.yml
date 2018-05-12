@@ -14,7 +14,7 @@ spring:
     encoding: UTF-8
     prefix: classpath:/templates/
     suffix: .html
-    mode: HTML
+#    mode: HTML
      
 eureka:
   client:
