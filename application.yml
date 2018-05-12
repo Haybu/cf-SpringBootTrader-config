@@ -46,7 +46,7 @@ spring:
     sampler:
       probability: 0.1
 
- zuul:
+zuul:
   ignoredServices: '*'
   routes:
     quotes-service: /quotes-service/**
