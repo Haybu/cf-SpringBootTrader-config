@@ -45,18 +45,18 @@ zuul:
     accounts-service: /accounts-service/***
     portfolio-service: /portfolio-service/***
 
-security:
-  oauth2:
-    client:
-      client-id: 0oaexw65nf3cERmZQ0h7
-      client-secret: jOJfirRZ9swqhQDll0nIGVHPU2jiqxqk_Z6neNWW
-      access-token-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/token
-      user-authorization-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/authorize
-      scope: openid profile email
-    resource:
-      user-info-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/userinfo
-      token-info-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/introspect
-      prefer-token-info: false
+#security:
+#  oauth2:
+#    client:
+#      client-id: 0oaexw65nf3cERmZQ0h7
+#      client-secret: jOJfirRZ9swqhQDll0nIGVHPU2jiqxqk_Z6neNWW
+#      access-token-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/token
+#      user-authorization-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/authorize
+#      scope: openid profile email
+#    resource:
+#      user-info-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/userinfo
+#      token-info-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/introspect
+#      prefer-token-info: false
 
 ---
 spring:
