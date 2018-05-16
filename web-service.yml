@@ -38,6 +38,7 @@ spring:
           okta:
             client-id: 0oaexw65nf3cERmZQ0h7
             client-secret: jOJfirRZ9swqhQDll0nIGVHPU2jiqxqk_Z6neNWW
+            redirect-uri-template: http://243cef5e.ngrok.io/login/oauth2/code/okta
         provider:
           okta:
             authorization-uri: https://dev-154532.oktapreview.com/oauth2/default/v1/authorize
